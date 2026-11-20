@@ -1,19 +1,80 @@
-# React + Vite
+# NovaDesk – Authentication UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive authentication interface built with React and Tailwind CSS. NovaDesk provides a clean signup experience with form validation, password strength feedback, and a smooth user flow.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Clean and modern signup UI
+- Responsive design for different screen sizes
+- Login and Signup pages
+- Signup completion screen
+- Client-side form validation
+- Password strength indicator
+- Show/Hide password functionality
+- Confirm password validation
+- Form handling with React Hook Form
+- Schema validation with Zod
+- Page navigation using React Router
+- Loading and success states
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React** – UI development
+- **React Router** – Client-side routing
+- **Tailwind CSS** – Styling and responsive design
+- **React Hook Form** – Form state management
+- **Zod** – Schema-based validation
+- **JavaScript (ES6+)** – Application logic
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+```text
+src/
+├── assets/
+├── components/
+├── ── Login.jsx
+│   ├── Signup.jsx
+│   └── SignupComplete.jsx
+├── App.jsx
+└── main.jsx
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd novadesk
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🔐 Authentication Disclaimer
+
+This project currently focuses on frontend authentication UI and form validation.
+
+It does not implement real backend authentication, database storage, or OAuth integration.
+
+## 🎯 Project Goal
+
+The goal of this project is to apply React concepts in a practical application, including component architecture, React Hooks, routing, form handling, validation, and reusable UI components.
+
+---
+
+**Built with ❤️ using React.**
