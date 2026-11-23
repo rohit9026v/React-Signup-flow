@@ -9,8 +9,8 @@ const App = () => {
     <div className='grid grid-cols-1 md:grid-cols-2 w-full h-screen' >
       <Branding />
       {/* <Sign_up /> */}
-      {/* <Login /> */}
-      <Signed_up name={"Rohit"} email={"rohit9026v@gmail.com"}/>
+      <Login />
+      {/* <Signed_up name={"Rohit"} email={"rohit9026v@gmail.com"}/> */}
     </div>
   )
 }
