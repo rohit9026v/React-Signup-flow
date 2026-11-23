@@ -21,11 +21,11 @@ const Signed_up = ({ name, email }) => {
         </p>
       </div>
       <div className="flex flex-col gap-4 w-96">
-        <button typeof="button" className="rounded-xl bg-[#5246E5] text-white flex items-center justify-center text-xl font-semibold p-2 cursor-pointer transition ease-in-out active:scale-95 duration-200">
+        <button type="button" className="rounded-xl bg-[#5246E5] text-white flex items-center justify-center text-xl font-semibold p-2 cursor-pointer transition ease-in-out active:scale-95 duration-200">
           {" "}
           Continue to Workspace
         </button>
-        <button typeof="button" className="rounded-xl border-2 border-gray-200 flex items-center justify-center text-xl font-semibold p-2 cursor-pointer transition ease-in-out active:scale-95 duration-200">
+        <button type="button" className="rounded-xl border-2 border-gray-200 flex items-center justify-center text-xl font-semibold p-2 cursor-pointer transition ease-in-out active:scale-95 duration-200">
           {" "}
           Back to Log in
         </button>

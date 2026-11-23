@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
-import z from "zod";
+import z, { optional } from "zod";
 
 const loginSchema = z.object({
   email: z
@@ -9,7 +9,8 @@ const loginSchema = z.object({
     .trim()
     .min(1, "Email is required")
     .email("Invalid email format"),
-  password: z.string().trim().min(8, "Minimum 8 character are required"),
+  password: z.string().trim().min(1, "Password is required"),
+  rememberMe: z.boolean().optional(),
 });
 
 const Login = () => {
@@ -21,8 +22,8 @@ const Login = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = () => {
-    console.log("working");
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
@@ -39,7 +40,7 @@ const Login = () => {
 
       <form
         action=""
-        onClick={handleSubmit(onsubmit)}
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-6 text-sm"
       >
         <div className="flex flex-col gap-1">
@@ -48,6 +49,7 @@ const Login = () => {
           </label>
           <input
             type="text"
+            id="email"
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-2 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
             placeholder="john@example.com"
             {...register("email")}
@@ -71,6 +73,7 @@ const Login = () => {
 
           <input
             type="password"
+            id="password"
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-2 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
             placeholder="Enter your password"
             {...register("password")}
@@ -79,9 +82,9 @@ const Login = () => {
             <p className="text-red-500"> {errors.password.message}</p>
           )}
         </div>
-        <div className="flex items-center gap-1">
-          <input type="checkbox" />{" "}
-          <label htmlFor="Remember me">Remember me</label>
+        <div className="flex items-center gap-1 cursor-pointer">
+          <input type="checkbox" id="rememberMe" {...register("rememberMe")} />{" "}
+          <label className="cursor-pointer" htmlFor="rememberMe">Remember me</label>
         </div>
 
         <div>
@@ -100,13 +103,31 @@ const Login = () => {
         </div>
 
         <div className="flex gap-8 justify-center items-center">
-          <button className="border border-gray-400 rounded-full p-1 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200">
+          <button
+            type="button"
+            className="border border-gray-400 rounded-full p-1 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200"
+            onClick={() => {
+              console.log("google");
+            }}
+          >
             <img src="./src/assets/icons/google.png" alt="" />
           </button>
-          <button className="border border-gray-400 rounded-full p-1 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200">
+          <button
+            type="button"
+            className="border border-gray-400 rounded-full p-1 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200"
+            onClick={() => {
+              console.log("facebook");
+            }}
+          >
             <img src="./src/assets/icons/facebook.png" alt="" />
           </button>
-          <button className="border border-gray-400 rounded-full p-1 h-10 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200">
+          <button
+            type="button"
+            className="border border-gray-400 rounded-full p-1 h-10 w-10 flex cursor-pointer transition ease-in-out active:scale-95 duration-200"
+            onClick={() => {
+              console.log("git");
+            }}
+          >
             <img src="./src/assets/icons/github.png" alt="" />
           </button>
         </div>

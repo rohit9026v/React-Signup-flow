@@ -57,6 +57,7 @@ const Sign_up = () => {
           <label htmlFor="userName">Full Name</label>
           <input
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-1 px-3 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
+            id="userName"
             placeholder="John Doe"
             {...register("userName")}
           />
@@ -69,6 +70,7 @@ const Sign_up = () => {
           <label htmlFor="email">Email address</label>
           <input
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-1 px-3 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
+            id="email"
             placeholder="john@example.com"
             {...register("email")}
           />
@@ -81,6 +83,7 @@ const Sign_up = () => {
           <label htmlFor="password">Password</label>
           <input
             type="password"
+            id="password"
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-1 px-3 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
             placeholder="8+ charachers"
             {...register("password")}
@@ -94,6 +97,7 @@ const Sign_up = () => {
           <label htmlFor="confirmPass">Confirm Password</label>
           <input
             type="password"
+            id="confirmPass"
             className="rounded-lg w-96 border-gray-300 border bg-gray-100 p-1 px-3 focus:outline-none focus:ring-4 focus:border-[#5246E5] focus:ring-[#5246E5]/10 focus:bg-white duration-200 ease-in-out"
             {...register("confirmPassword")}
           />
