@@ -1,14 +1,16 @@
 import React from 'react'
-import RHF from './components/RHF'
-import Left from './components/Left'
+import Sign_up from './components/Sign_up'
+import Branding from './components/Branding'
 import Login from './components/Login'
+import Signed_up from './components/Signed_up'
 
 const App = () => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 w-full h-screen' >
-      <Left />
-      {/* <RHF /> */}
-      <Login />
+      <Branding />
+      {/* <Sign_up /> */}
+      {/* <Login /> */}
+      <Signed_up name={"Rohit"} email={"rohit9026v@gmail.com"}/>
     </div>
   )
 }

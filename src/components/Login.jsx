@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-16 gap-8">
+    <div className="flex flex-col items-center py-16 gap-12">
       <div className="w-full max-w-md flex flex-col px-8">
         <h1 className="text-2xl font-extrabold">Welcome back</h1>
         <div className="flex gap-1">

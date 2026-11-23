@@ -1,6 +1,6 @@
 import React from "react";
 
-const Left = () => {
+const Branding = () => {
   return (
     <div className="bg-linear-to-bl from-[#26215C] via-[#181A3B] to-[#0F1124]  text-white/80 font-semibold font-sans px-38 py-4 flex flex-col justify-start text-sm">
       <div className="flex items-center gap-2 mb-16">
@@ -30,7 +30,7 @@ const Left = () => {
                 src="./src/assets/icons/correct.png"
                 alt=""
               />{" "}
-              Acess to all AI models
+              Access to all AI models
             </li>
             <li className="flex items-center gap-2">
               {" "}
@@ -104,4 +104,4 @@ const Left = () => {
   );
 };
 
-export default Left;
+export default Branding ;

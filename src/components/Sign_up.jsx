@@ -23,7 +23,7 @@ const signUpSchema = z
     path: ["confirmPassword"],
   });
 
-const RHF = () => {
+const Sign_up = () => {
   const {
     register,
     handleSubmit,
@@ -38,7 +38,7 @@ const RHF = () => {
   };
 
   return (
-    <div className="flex flex-col py-8 items-center gap-7 ">
+    <div className="flex flex-col py-8 items-center gap-7">
       <div className="w-full max-w-md flex flex-col px-8">
         <h1 className="font-extrabold text-2xl">Create an account</h1>
         <div className="flex gap-1">
@@ -157,4 +157,4 @@ const RHF = () => {
   );
 };
 
-export default RHF;
+export default Sign_up;
