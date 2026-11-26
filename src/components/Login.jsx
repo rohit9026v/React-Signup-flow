@@ -29,10 +29,10 @@ const Login = () => {
   return (
     <div className="flex flex-col items-center py-16 gap-12">
       <div className="w-full max-w-md flex flex-col px-8">
-        <h1 className="text-2xl font-extrabold">Welcome back</h1>
-        <div className="flex gap-1">
-          <p className="text-gray-500 text-xs">Don't have an account?</p>
-          <a href="" className="text-blue-900 font-bold text-xs cursor-pointer">
+        <h1 className="text-3xl font-extrabold">Welcome back</h1>
+        <div className="flex gap-1 text-sm">
+          <p className="text-gray-500 ">Don't have an account?</p>
+          <a href="" className="text-blue-900 font-bold cursor-pointer">
             Sign up
           </a>
         </div>
@@ -41,10 +41,10 @@ const Login = () => {
       <form
         action=""
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-6 text-sm"
+        className="flex flex-col gap-6"
       >
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="font-semibold text-mg">
+          <label htmlFor="email" className="font-semibold ">
             Email address
           </label>
           <input
@@ -58,14 +58,14 @@ const Login = () => {
             <p className="text-red-500"> {errors.email.message}</p>
           )}
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-base">
           <div className="flex justify-between items-center">
-            <label htmlFor="password" className="font-semibold text-mg">
+            <label htmlFor="password" className="font-semibold">
               Password
             </label>
             <a
               href=""
-              className="text-blue-900 font-bold text-xs cursor-pointer"
+              className="text-blue-900 font-bold text-sm cursor-pointer"
             >
               Forgot password?
             </a>
@@ -90,7 +90,7 @@ const Login = () => {
         <div>
           <button
             type="submit"
-            className="bg-[#534CE8] rounded-lg p-2 w-96 text-white font-semibold cursor-pointer transition ease-in-out active:scale-95 duration-300"
+            className="bg-[#534CE8] rounded-lg p-2 w-96 text-white text-lg font-semibold cursor-pointer transition ease-in-out active:scale-95 duration-300"
           >
             Log in
           </button>

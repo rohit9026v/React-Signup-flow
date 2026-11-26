@@ -31,7 +31,7 @@ const Signed_up = ({ name, email }) => {
         </button>
       </div>
       <div>
-        <p>Didn't receive the email? <a href="" className="text-[#5246E5] font-semibold cursor-pointer"> Click to resend</a></p>
+        <p>Didn't receive the email? <a href="" className="text-[#5246E5] font-semibold cursor-pointer text-base"> Click to resend</a></p>
       </div>
     </div>
   );
